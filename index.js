@@ -27,3 +27,11 @@ function getHumanChoice() {
 }
 
 console.log(getHumanChoice());
+
+humanScore = 0;
+
+computerScore = 0;
+
+console.log(humanScore);
+console.log(computerScore);
+
