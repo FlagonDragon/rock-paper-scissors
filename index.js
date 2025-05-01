@@ -12,3 +12,18 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+    result = prompt("Shoot!")
+    if (result === 'rock') {
+        return 'rock'
+    } else if (result === 'paper') {
+        return 'paper'
+    } else if (result === 'scissors') {
+        return 'scissors'
+    } else {
+        return 'whatchu on about holmes'
+    }
+}
+
+console.log(getHumanChoice());
