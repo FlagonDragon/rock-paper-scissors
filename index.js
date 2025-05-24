@@ -1,37 +1,100 @@
-console.log('Ayyyy');
+// console.log('Ayyyy');
 
 function getComputerChoice() {
     result = Math.random();
     if (result <= 0.33) {
-        return 'rock';
+        return 'Rock';
     } else if (result > 0.33 && result <= 0.66) {
-        return 'paper';
+        return 'Paper';
     } else {
-        return 'scissors'
+        return 'Scissors'
     }
 }
-
-console.log(getComputerChoice());
 
 function getHumanChoice() {
-    result = prompt("Shoot!")
+    result = prompt("Shoot!").toLowerCase();
     if (result === 'rock') {
-        return 'rock'
+        return 'Rock'
     } else if (result === 'paper') {
-        return 'paper'
+        return 'Paper'
     } else if (result === 'scissors') {
-        return 'scissors'
+        return 'Scissors'
     } else {
-        return 'whatchu on about holmes'
+        return 'WHATCHU ON ABOUT HOLMES!!!!'
     }
 }
-
-console.log(getHumanChoice());
 
 humanScore = 0;
 
 computerScore = 0;
 
-console.log(humanScore);
-console.log(computerScore);
+function playRound(humanChoice,computerChoice) {
 
+console.log(humanChoice+' Vs. '+computerChoice);
+
+if (humanChoice === 'Rock' && computerChoice === 'Paper') {
+    ++computerScore
+    return 'U lost boy!!! Paper ENVELOPS rock!!!';;
+} else if (humanChoice === 'Rock' && computerChoice === 'Scissors') {
+    ++humanScore
+    return 'U won!!! Rock DEMOLISHES scissors!!! Kachow!!!!'
+} else if (humanChoice === 'Paper' && computerChoice === 'Rock') {
+    ++humanScore
+    return 'U won!!! Paper ENVELOPS rock!!! Kachow!!!!'
+} else if (humanChoice === 'Paper' && computerChoice === 'Scissors') {
+    ++computerScore
+    return 'U lost boy!!! Scissors BUTCHER paper!!!'
+} else if (humanChoice === 'Scissors' && computerChoice === 'Rock') {
+    ++computerScore
+    return 'U lost boy!!! Rock DEMOLISHES scissors!!!'
+} else if (humanChoice === 'Scissors' && computerChoice === 'Paper') {
+    ++humanScore
+    return 'U won!!! Scissors BUTCHER paper!!! Kachow!!!!'
+} else {
+    ++humanScore
+    ++computerScore
+    return 'Uh-oh! Stalemate!!!'
+}
+
+}
+
+function playGame() {
+
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
+
+    console.log(humanScore);
+    console.log(computerScore);
+
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
+
+    console.log(humanScore);
+    console.log(computerScore);
+
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
+    
+    console.log(humanScore);
+    console.log(computerScore);
+
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
+    
+    console.log(humanScore);
+    console.log(computerScore);
+
+    console.log(playRound(getHumanChoice(),getComputerChoice()));   
+    
+    console.log(humanScore);
+    console.log(computerScore);
+
+    if (humanScore > computerScore) {
+        console.log('HUMONGOUS WIN. LET\'S GO CHAMP!!!!!');
+    } else if (humanScore < computerScore){
+        console.log('Utter defeat. You are a disappointment.');
+    } else {
+        console.log('You are evenly matched!!!');
+    }
+        
+    console.log('Thanks for playing!!!');
+    
+}
+
+playGame()
