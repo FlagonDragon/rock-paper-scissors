@@ -51,40 +51,66 @@ if (humanChoice === 'Rock' && computerChoice === 'Paper') {
     ++humanScore
     return 'U won!!! Scissors BUTCHER paper!!! Kachow!!!!'
 } else {
-    ++humanScore
-    ++computerScore
     return 'Uh-oh! Stalemate!!!'
 }
 
 }
 
+function humanScoreText() {
+    return `Your score: ${humanScore} points`
+};
+
+function computerScoreText() { 
+    return `Opponent's score: ${computerScore} points`
+};
+
+
 function playGame() {
 
+
+
+    console.log('Round 1!!!');
+
     console.log(playRound(getHumanChoice(),getComputerChoice()));
 
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log(humanScoreText());
+    console.log(computerScoreText());
+    console.log('');
+    
+    console.log('Round 2!!!');
 
     console.log(playRound(getHumanChoice(),getComputerChoice()));
 
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log(humanScoreText());
+    console.log(computerScoreText());
+    console.log('');
+
+    console.log('Round 3!!!');
 
     console.log(playRound(getHumanChoice(),getComputerChoice()));
     
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log(humanScoreText());
+    console.log(computerScoreText());
+    console.log('');
+
+    console.log('Round 4!!!');
 
     console.log(playRound(getHumanChoice(),getComputerChoice()));
     
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log(humanScoreText());
+    console.log(computerScoreText());
+    console.log('');
+
+    console.log('Round 5!!!');
 
     console.log(playRound(getHumanChoice(),getComputerChoice()));   
     
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log(humanScoreText());
+    console.log(computerScoreText());
+    console.log('');
 
+    console.log('It is over!!!!');
+    
     if (humanScore > computerScore) {
         console.log('HUMONGOUS WIN. LET\'S GO CHAMP!!!!!');
     } else if (humanScore < computerScore){
@@ -95,6 +121,6 @@ function playGame() {
         
     console.log('Thanks for playing!!!');
     
-}
+};
 
-playGame()
+playGame();
